@@ -25,7 +25,7 @@ const ProductDetails = () => {
 
   //   fetchProduct();
   // }, [id]);
-  const url = "http://localhost:5000/api/products/"
+  const url = "https://sahana-brown-living-backend.onrender.com/api/products/"
   
   const [product, setProduct] = useState([]);
   useEffect(() => {

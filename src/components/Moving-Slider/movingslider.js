@@ -6,7 +6,7 @@ import axios from 'axios';
 
 // const [cartProduct, setcartProduct ] = useState();
 
-const url = "http://localhost:5000/api/products";
+const url = "https://sahana-brown-living-backend.onrender.com/api/products";
 
 
 const addToCart = async (product)=>{

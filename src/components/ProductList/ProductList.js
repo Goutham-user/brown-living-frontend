@@ -411,7 +411,7 @@ const ProductList = () => {
 
 
 
-  const url = "http://localhost:5000/api/products"
+  const url = "https://brown-living-backend.onrender.com/api/products"
 
 
   useEffect(() => {

@@ -72,7 +72,7 @@ const Header = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/user/login", { email, password });
+      const response = await axios.post("https://brown-living-backend.onrender.com/api/user/login", { email, password });
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("user", response.data.user);
       setLogedInUser(localStorage.getItem("user"));

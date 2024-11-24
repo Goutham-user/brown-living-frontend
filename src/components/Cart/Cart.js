@@ -18,7 +18,7 @@ const Cart = () => {
   // ]
   
   // const { user } = useParams();
-  const url = "http://localhost:5000/api/products/cart"
+  const url = "https://brown-living-backend.onrender.com/api/products/cart"
 
 useEffect(() => {
     // Fetch products from an API or use static data

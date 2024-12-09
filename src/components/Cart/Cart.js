@@ -18,7 +18,7 @@ const Cart = () => {
   // ]
   
   // const { user } = useParams();
-  const url = "https://sahana-brown-living-backend.onrender.com/api/products/cart"
+  const url = "http://localhost:5000/api/products/cart"
 
 useEffect(() => {
     // Fetch products from an API or use static data
@@ -115,7 +115,7 @@ useEffect(() => {
           <label>
             <input type="checkbox" /> Pay Via Gift Card
           </label>
-          <button className="pay-now-btn">PAY NOW</button>
+          <button className="pay-now-btn" onClick={()=>alert("Ordered Sucessfully!")}>PAY NOW</button>
         </div>
       </div>
     </div>

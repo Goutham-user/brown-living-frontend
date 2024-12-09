@@ -62,7 +62,7 @@ const popularCategories = [
   },
   {
     id: 10,
-    image: 'https://brownliving.in/cdn/shop/files/Womens_Pants_aeb16d8c-bdc0-4c17-ba64-7cc184d9133f_300x.jpg?v=1705929564',      
+    image: 'https://brownliving.in/cdn/shop/files/Womens_Pants_aeb16d8c-bdc0-4c17-ba64-7cc184d9133f_300x.jpg?v=1705929564',
     category: 'bestSelling'
   },
   {
@@ -87,7 +87,7 @@ const popularCategories = [
   }
 ]
 
-const organicCareCategoroes =[
+const organicCareCategoroes = [
   {
     id: 'img-1',
     image: '//brownliving.in/cdn/shop/files/Body_Care_450x.png?v=1695390147',
@@ -211,7 +211,7 @@ const fashionCategories = [
   }
 ]
 
-const kidsFashionCategories =[
+const kidsFashionCategories = [
   {
     id: 'img-2',
     image: '//brownliving.in/cdn/shop/files/Sets_Overalls_450x.png?v=1695393704',
@@ -325,7 +325,7 @@ const foodDrinksCategories = [
   }
 ]
 
-const travelCategories =[
+const travelCategories = [
   {
     id: 'img-2',
     image: '//brownliving.in/cdn/shop/files/Backpacks_450x.png?v=1695391863',
@@ -411,14 +411,14 @@ const ProductList = () => {
 
 
 
-  const url = "https://sahana-brown-living-backend.onrender.com/api/products"
+  const url = "http://localhost:5000/api/products"
 
 
   useEffect(() => {
     // Fetch products from an API or use static data
     const bestSelling = async () => {
       try {
-        const response = await axios.get(url, { params: { category: 'bestSelling' } });
+        const response = await axios.get(url, { params: { category: 'best-selling-sustainable-products' } });
         setTrendingProducts_api(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -433,7 +433,7 @@ const ProductList = () => {
     // Fetch products from an API or use static data
     const careProducts = async () => {
       try {
-        const response = await axios.get(url, { params: { category: 'care' } });
+        const response = await axios.get(url, { params: { category: 'organic-personal-care-products' } });
         setCare(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -448,7 +448,7 @@ const ProductList = () => {
     // Fetch products from an API or use static data
     const homeEssentialsProducts = async () => {
       try {
-        const response = await axios.get(url, { params: { category: 'homeEssentials' } });
+        const response = await axios.get(url, { params: { category: "eco-friendly-home-living-essentials" } });
         sethomeEssentials(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -463,7 +463,7 @@ const ProductList = () => {
     // Fetch products from an API or use static data
     const fashionProductsApi = async () => {
       try {
-        const response = await axios.get(url, { params: { category: 'pFashion' } });
+        const response = await axios.get(url, { params: { category: 'fashion' } });
         setfashionProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -479,7 +479,7 @@ const ProductList = () => {
     // Fetch products from an API or use static data
     const kidsProductsAPI = async () => {
       try {
-        const response = await axios.get(url, { params: { category: 'kids' } });
+        const response = await axios.get(url, { params: { category: 'sustainable-kids-corner' } });
         setkidsProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -494,7 +494,7 @@ const ProductList = () => {
     // Fetch products from an API or use static data
     const giftProductsAPI = async () => {
       try {
-        const response = await axios.get(url, { params: { category: 'gifts' } });
+        const response = await axios.get(url, { params: { category: 'sustainable-gifts' } });
         setgiftProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -509,7 +509,7 @@ const ProductList = () => {
     // Fetch products from an API or use static data
     const foodDrinkssAPI = async () => {
       try {
-        const response = await axios.get(url, { params: { category: 'foodDrinks' } });
+        const response = await axios.get(url, { params: { category: 'organic-food-drinks' } });
         setfoodDrinksProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -524,7 +524,7 @@ const ProductList = () => {
     // Fetch products from an API or use static data
     const travelProductsAPI = async () => {
       try {
-        const response = await axios.get(url, { params: { category: 'travel' } });
+        const response = await axios.get(url, { params: { category: 'eco-friendly-travel-essentials' } });
         settravelProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -624,337 +624,421 @@ const ProductList = () => {
           <div className='col-3'>Empowering 550+ Sustainable Brands <span className="pl-6">💚</span></div>
         </div>
       </div>
-     
+
       <div className='mlr-24'>
 
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Trending Today</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("bestSelling"); // Pass category
-            }}>
-              Read More →
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* {console.log(trendinngProducts_api.length)} */}
-      <TrendingToday trendinngProducts={trendinngProducts_api} />
-
-
-
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Popular Categories</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("bestSelling"); // Pass category
-            }}>
-              Read More →
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <TrendingToday trendinngProducts={popularCategories} />
-
-
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Our Impact</h3></div>
-          <div className='col-lg-6 text-end'>
-            <a href="/more-info" className="read-more">
-              Read More →
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div className="impact-section">
-        <div className="impact-grid">
-          {impactData.map((item, index) => (
-            <div className="impact-item" key={index}>
-              <img src={item.icon} alt={item.label} className="impact-icon" />
-              <div className="impact-value">{item.value}</div>
-              <div className="impact-label">{item.label}</div>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Trending Today</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("best-selling-sustainable-products"); // Pass category
+                }}>
+                Read More →
+              </a>
             </div>
-          ))}
-        </div>
-
-      </div>
-
-
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Popular in Care</h3></div>
-          <div className='col-lg-6 text-end'>
-            <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("care"); // Pass category
-            }}>
-              Read More →
-            </a>
           </div>
         </div>
-      </div>
+
+        {/* {console.log(trendinngProducts_api.length)} */}
+        <TrendingToday trendinngProducts={trendinngProducts_api} />
 
 
-      <TrendingToday trendinngProducts={care} />
 
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Organic Personal Care</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("care"); // Pass category
-            }}>
-              Read More →
-            </a>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Popular Categories</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("best-selling-sustainable-products"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <TrendingToday trendinngProducts={organicCareCategoroes} />
-
+        <TrendingToday trendinngProducts={popularCategories} />
 
 
-
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Home Essentials</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("homeEssentials"); // Pass category
-            }}>
-              Read More →
-            </a>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Our Impact</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="/more-info" className="read-more">
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
 
 
+        <div className="impact-section">
+          <div className="impact-grid">
+            {impactData.map((item, index) => (
+              <div className="impact-item" key={index}>
+                <img src={item.icon} alt={item.label} className="impact-icon" />
+                <div className="impact-value">{item.value}</div>
+                <div className="impact-label">{item.label}</div>
+              </div>
+            ))}
+          </div>
+
+        </div>
 
 
-      <TrendingToday trendinngProducts={homeEssentials} />
-
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Home & Living</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("homeEssentials"); // Pass category
-            }}>
-              Read More →
-            </a>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Popular in Care</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("organic-personal-care-products"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <TrendingToday trendinngProducts={homeCategories} />
 
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Popular in Fashion</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("pFashion"); // Pass category
-            }}>
-              Read More →
-            </a>
+        <TrendingToday trendinngProducts={care} />
+
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Organic Personal Care</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("organic-personal-care-products"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+
+        <TrendingToday trendinngProducts={organicCareCategoroes} />
 
 
-      <TrendingToday trendinngProducts={fashionProducts} />
 
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Sustainable Fashion</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("pFashion"); // Pass category
-            }}>
-              Read More →
-            </a>
+
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Home Essentials</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("eco-friendly-home-living-essentials"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
 
-      <TrendingToday trendinngProducts={fashionCategories} />
 
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Loved by Kids</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("kids"); // Pass category
-            }}>
-              Read More →
-            </a>
+
+
+        <TrendingToday trendinngProducts={homeEssentials} />
+
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Home & Living</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("eco-friendly-home-living-essentials"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
+        <TrendingToday trendinngProducts={homeCategories} />
 
-      <TrendingToday trendinngProducts={kidsProducts} />
-
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Kids Corner</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("kids"); // Pass category
-            }}>
-              Read More →
-            </a>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Popular in Fashion</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("fashion"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
 
-      <TrendingToday trendinngProducts={kidsFashionCategories} />
+        <TrendingToday trendinngProducts={fashionProducts} />
 
-
-
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Best Selling Gifts</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("gifts"); // Pass category
-            }}>
-              Read More →
-            </a>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Sustainable Fashion</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("fashion"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
 
-      <TrendingToday trendinngProducts={giftProducts} />
+        <TrendingToday trendinngProducts={fashionCategories} />
 
-
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Sustainable Gifts</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("gifts"); // Pass category
-            }}>
-              Read More →
-            </a>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Loved by Kids</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("sustainable-kids-corner"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-
-      <TrendingToday trendinngProducts={giftCategories} />
 
 
 
 
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Popular in Food & Drink</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("foodDrinks"); // Pass category
-            }}>
-              Read More →
-            </a>
+        <TrendingToday trendinngProducts={kidsProducts} />
+
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-4 img-gallery'>
+              <img src='//brownliving.in/cdn/shop/files/Living_Room_3629a9ba-26f1-49c1-8153-c18669ebb547_600x.jpg?v=1728231605' onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("eco-friendly-home-living-essentials"); // Pass category
+                }}/>
+
+            </div>
+            <div className='col-4 img-gallery'>
+              <img src='//brownliving.in/cdn/shop/files/Home_Garden_ab94cd7f-ad4f-4cc9-98ae-1a30aeecc5b4_600x.jpg?v=1728231619'onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("gardening-tools-planters-flower-pots"); // Pass category
+                }} />
+
+            </div>
+            <div className='col-4 img-gallery'>
+              <img src='//brownliving.in/cdn/shop/files/Bedroom_81648206-a8c1-4887-885c-054b5330d8b9_600x.jpg?v=1728231632' onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("sustainable-bed-linens"); // Pass category
+                }} />
+
+            </div>
+
+            <div className='col-4 img-gallery'>
+              <img src='https://brownliving.in/cdn/shop/files/Kids_Corner_7c87e834-7abd-4d82-b82e-829aabeb2f5c_600x.jpg?v=1728231640' onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("sustainable-kids-corner"); // Pass category
+                }}/>
+            </div>
+            <div className='col-4 img-gallery'>
+              <img src='//brownliving.in/cdn/shop/files/Bathroom_2aedcb4e-adf3-4b86-b2aa-6400224b090b_600x.jpg?v=1728231646' onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("sustainable-bathroom-essentials"); // Pass category
+                }}/>
+
+            </div>
+            <div className='col-4 img-gallery'>
+              <img src='//brownliving.in/cdn/shop/files/Kitchen_bfeb86ec-7b76-4a80-b413-c7b34ce7f8cc_600x.jpg?v=1728231653' onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("sustainable-kitchenware"); // Pass category
+                }}/>
+            </div>
+
+            <div className='col-4 img-gallery'>
+              <img src='//brownliving.in/cdn/shop/files/Dining_1efbfe81-4a3a-4e94-a482-58885f98096d_600x.jpg?v=1728231658' onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("eco-friendly-dining-table-essentials"); // Pass category
+                }} />
+
+            </div>
+            <div className='col-4 img-gallery'>
+              <img src='//brownliving.in/cdn/shop/files/Office_87ebf114-a526-4fe5-98f4-4584d5fa45e8_600x.jpg?v=1728231664' onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("eco-friendly-stationery"); // Pass category
+                }}/>
+
+            </div>
+            <div className='col-4 img-gallery'>
+              <img src='//brownliving.in/cdn/shop/files/Yoga_Wellness_f8c15454-083d-41f2-92e6-f86b4d82f02e_600x.jpg?v=1728231671' onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("sustainable-yoga-essentials"); // Pass category
+                }}/>
+
+            </div>
+
           </div>
         </div>
-      </div>
-
-
-      <TrendingToday trendinngProducts={foodDrinksProducts} />
-
-
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Organic Food & Drink</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("foodDrinks"); // Pass category
-            }}>
-              Read More →
-            </a>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Kids Corner</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("sustainable-kids-corner"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
 
-      <TrendingToday trendinngProducts={foodDrinksCategories} />
+        <TrendingToday trendinngProducts={kidsFashionCategories} />
+        
 
+        {/* <div className='container-fluid gifts-img'>
+          <div className='row'>
+            <div className='col-6'>
+              <img src='https://brownliving.in/cdn/shop/products/sustainable-gift-card-bl-18-gift-cards-brown-living-492516_900x.jpg?v=1717419326' />
 
+            </div>
+            <div className='col-6'>
+              <img src='//brownliving.in/cdn/shop/files/Home_Garden_ab94cd7f-ad4f-4cc9-98ae-1a30aeecc5b4_600x.jpg?v=1728231619' />
 
+            </div>
+            
 
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Popular in Travel</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("travel"); // Pass category
-            }}>
-              Read More →
-            </a>
+          </div>
+        </div> */}
+
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Best Selling Gifts</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("sustainable-gifts"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
 
-      <TrendingToday trendinngProducts={travelProducts} />
+        <TrendingToday trendinngProducts={giftProducts} />
 
 
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-6'><h3 className="sub-heading">Work & Travel</h3></div>
-          <div className='col-lg-6 text-end'>
-          <a href="#" className="read-more"
-             onClick={(e) => {
-              e.preventDefault(); // Prevent default anchor behavior
-              handleNavigation("travel"); // Pass category
-            }}>
-              Read More →
-            </a>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Sustainable Gifts</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("sustainable-gifts"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+
+
+        <TrendingToday trendinngProducts={giftCategories} />
+
+
+
+
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Popular in Food & Drink</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("organic-food-drinks"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <TrendingToday trendinngProducts={foodDrinksProducts} />
+
+
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Organic Food & Drink</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("organic-food-drinks"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <TrendingToday trendinngProducts={foodDrinksCategories} />
+
+
+
+
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Popular in Travel</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("eco-friendly-travel-essentials"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <TrendingToday trendinngProducts={travelProducts} />
+
+
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-6'><h3 className="sub-heading">Work & Travel</h3></div>
+            <div className='col-lg-6 text-end'>
+              <a href="#" className="read-more"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default anchor behavior
+                  handleNavigation("eco-friendly-travel-essentials"); // Pass category
+                }}>
+                Read More →
+              </a>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -964,7 +1048,7 @@ const ProductList = () => {
       <SlideShow />
 
 
-    
+
 
     </div>
   );

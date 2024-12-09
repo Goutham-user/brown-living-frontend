@@ -25,7 +25,7 @@ const ProductDetails = () => {
 
   //   fetchProduct();
   // }, [id]);
-  const url = "https://sahana-brown-living-backend.onrender.com/api/products/"
+  const url = "http://localhost:5000/api/products/"
   
   const [product, setProduct] = useState([]);
   useEffect(() => {
@@ -181,7 +181,7 @@ const ProductDetails = () => {
             </p>
           <p className="tax-detail">Tax included. Shipping calculated at checkout.</p>
           <button className="button-detail add-to-cart-detail" onClick={()=>addToCartList(product)}>ADD TO CART</button>
-          <button className="button-detail buy-now-detail">BUY IT NOW</button>
+          <button className="button-detail buy-now-detail" onClick={()=>alert("Ordered Sucessfully!")}>BUY IT NOW</button>
           <p className="points-detail">Buy this item and earn 10000 Earthy points</p>
         </div>
       </div>

@@ -53,7 +53,8 @@
 
 .navbar-item-1 {
   position: relative;
-  height: 37px;
+  height: auto;
+  padding: 4px;
   /* width: auto;
   height: auto; */
 }
@@ -80,7 +81,7 @@
 .dropdown-1-care {
   position: absolute;
   top: 96%;
-  left: -295px;
+  left: -308px;
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 10px;
@@ -92,23 +93,23 @@
 }
 
 .dropdown-1-fashion{
- left: -347px; 
+ left: -367px; 
 }
 
 .dropdown-1-east-drink{
- left: -416px; 
+ left: -439px; 
 }
 
 .dropdown-1-home{
- left: -512px; 
+ left: -542px; 
 }
 
 .dropdown-1-gifts{
- left: -750px; 
+ left: -820px; 
 }
 
 .dropdown-1-about{
- left: -954px; 
+ left: -1098px; 
 }
 
 .dropdown-item-1 {
@@ -127,7 +128,8 @@
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 10px;
-  min-width: 100px;
+  /* min-width: 100px; */
+  width: max-content;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }

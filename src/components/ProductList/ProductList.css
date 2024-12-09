@@ -274,3 +274,17 @@
   font-weight: 400;
   color: #546357;
 }
+
+.img-gallery{
+  /* border: 1px solid orange; */
+  height: 18rem;
+  padding: 2px;
+}
+
+.img-gallery img{
+  width: -webkit-fill-available;
+}
+
+.gifts-img{
+  width: 35rem;
+}

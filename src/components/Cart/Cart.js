@@ -115,7 +115,7 @@ useEffect(() => {
           <label>
             <input type="checkbox" /> Pay Via Gift Card
           </label>
-          <button className="pay-now-btn">PAY NOW</button>
+          <button className="pay-now-btn" onClick={()=>alert("Ordered Sucessfully!")}>PAY NOW</button>
         </div>
       </div>
     </div>

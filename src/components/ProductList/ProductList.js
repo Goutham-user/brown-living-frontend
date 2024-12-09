@@ -1045,7 +1045,7 @@ const ProductList = () => {
 
       <TrendingToday trendinngProducts={travelCategories} />
 
-      <SlideShow />
+      {/* <SlideShow /> */}
 
 
 

@@ -172,7 +172,7 @@ const fashionCategories = [
   {
     id: 'img-6',
     image: '//brownliving.in/cdn/shop/files/Womens_Co-ords_450x.png?v=1695303243',
-    category: 'sustainable-womens-overalls-co-ord'
+    category: 'sustainable-womens-overalls-co-ord-sets'
   },
   {
     id: 'img-8',

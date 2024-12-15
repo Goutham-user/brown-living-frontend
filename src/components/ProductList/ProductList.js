@@ -18,72 +18,72 @@ const popularCategories = [
   {
     id: 1,
     image: 'https://brownliving.in/cdn/shop/files/Aroma_Candles_300x.jpg?v=1698752591',
-    category: 'bestSelling'
+    category: 'organic-scented-candles'
   },
   {
     id: 2,
     image: 'https://brownliving.in/cdn/shop/files/Ghee_300x.jpg?v=1698752591',
-    category: 'bestSelling'
+    category: 'organic-grass-fed-ghee'
   },
   {
     id: 3,
     image: 'https://brownliving.in/cdn/shop/files/Backpacks_300x.jpg?v=1705928889',
-    category: 'bestSelling'
+    category: 'eco-friendly-backpacks'
   },
   {
     id: 4,
     image: 'https://brownliving.in/cdn/shop/files/Bath_Accessories_300x.jpg?v=1705928949',
-    category: 'bestSelling'
+    category: 'sustainable-bath-accessories'
   },
   {
     id: 5,
     image: 'https://brownliving.in/cdn/shop/files/Beverage_Accessories_2_50d2b934-4671-492a-8217-aeae635982a4_300x.jpg?v=1705929089',
-    category: 'bestSelling'
+    category: 'eco-friendly-beverage-accessories'
   },
   {
     id: 6,
     image: 'https://brownliving.in/cdn/shop/files/Bottles_Sippers_300x.jpg?v=1705929184',
-    category: 'bestSelling'
+    category: 'eco-friendly-bottles'
   },
   {
     id: 7,
     image: 'https://brownliving.in/cdn/shop/files/Coasters_300x.jpg?v=1705929279',
-    category: 'bestSelling'
+    category: 'eco-friendly-coasters'
   },
   {
     id: 8,
     image: 'https://brownliving.in/cdn/shop/files/Deodorant_300x.jpg?v=1705929311',
-    category: 'bestSelling'
+    category: 'eco-friendly-deodorants'
   },
   {
     id: 9,
     image: 'https://brownliving.in/cdn/shop/files/Shampoo_Conditioner_300x.jpg?v=1705929405',
-    category: 'bestSelling'
+    category: 'sustainable-shampoo-conditioner'
   },
   {
     id: 10,
     image: 'https://brownliving.in/cdn/shop/files/Womens_Pants_aeb16d8c-bdc0-4c17-ba64-7cc184d9133f_300x.jpg?v=1705929564',
-    category: 'bestSelling'
+    category: 'sustainable-womens-pants'
   },
   {
     id: 11,
     image: 'https://brownliving.in/cdn/shop/files/Learning_and_Educational_Toys_300x.jpg?v=1705929610',
-    category: 'bestSelling'
+    category: 'sustainable-learning-educational-toys'
   },
   {
     id: 12,
     image: 'https://brownliving.in/cdn/shop/files/Mens_Shirts_300x.jpg?v=1705929681',
-    category: 'bestSelling'
+    category: 'sustainable-mens-shirt'
   },
   {
     id: 13,
     image: 'https://brownliving.in/cdn/shop/files/Musical_Instruments_300x.jpg?v=1705929712',
-    category: 'bestSelling'
+    category: 'eco-friendly-musical-instruments'
   },
   {
     id: 14,
     image: 'https://brownliving.in/cdn/shop/files/Sauces_Dips_300x.jpg?v=1705929753',
-    category: 'bestSelling'
+    category: 'organic-sauces-dips'
   }
 ]
 
@@ -91,32 +91,32 @@ const organicCareCategoroes = [
   {
     id: 'img-1',
     image: '//brownliving.in/cdn/shop/files/Body_Care_450x.png?v=1695390147',
-    category: 'care'
+    category: 'sustainable-body-care'
   },
   {
     id: 'img-2',
     image: '//brownliving.in/cdn/shop/files/Face_Care_450x.png?v=1695390187',
-    category: 'care'
+    category: 'sustainable-face-care'
   },
   {
     id: 'img-3',
     image: '//brownliving.in/cdn/shop/files/Hair_Care_450x.png?v=1695390232',
-    category: 'care'
+    category: 'sustainable-hair-care'
   },
   {
     id: 'img-4',
     image: '//brownliving.in/cdn/shop/files/Sanitary_Care_450x.png?v=1695390284',
-    category: 'care'
+    category: 'sustainable-sanitary-care'
   },
   {
     id: 'img-5',
     image: '//brownliving.in/cdn/shop/files/Face_Massagers_450x.png?v=1695390328',
-    category: 'care'
+    category: 'face-massagers class'
   },
   {
     id: 'img-6',
     image: '//brownliving.in/cdn/shop/files/Lip_Care_450x.png?v=1695390365',
-    category: 'care'
+    category: 'sustainable-lip-care'
   }
 ]
 
@@ -124,37 +124,37 @@ const homeCategories = [
   {
     id: 'img-2',
     image: '//brownliving.in/cdn/shop/files/Home_Decor_450x.png?v=1695391360',
-    category: 'homeEssentials'
+    category: 'eco-friendly-home-decor'
   },
   {
     id: 'img-4',
     image: '//brownliving.in/cdn/shop/files/Bathroom_Essentials_450x.png?v=1695391412',
-    category: 'homeEssentials'
+    category: 'sustainable-bathroom-essentials'
   },
   {
     id: 'img-6',
     image: '//brownliving.in/cdn/shop/files/Cleaning_Supplies_450x.png?v=1695391464',
-    category: 'homeEssentials'
+    category: 'eco-friendly-cleaning-supplies'
   },
   {
     id: 'img-8',
     image: '//brownliving.in/cdn/shop/files/Home_Linens_450x.png?v=1695391500',
-    category: 'homeEssentials'
+    category: 'eco-friendly-home-linens-accessories'
   },
   {
     id: 'img-10',
     image: '//brownliving.in/cdn/shop/files/Aroma_Candles_450x.png?v=1695391701',
-    category: 'homeEssentials'
+    category: 'organic-scented-candles'
   },
   {
     id: 'img-12',
     image: '//brownliving.in/cdn/shop/files/Pots_Planters_0d4c0b34-9030-4b68-bc56-9e97fe093f2f_450x.png?v=1695391743',
-    category: 'homeEssentials'
+    category: 'eco-friendly-planters'
   },
   {
     id: 'img-14',
     image: '//brownliving.in/cdn/shop/files/Table_Essentials_450x.png?v=1695391825',
-    category: 'homeEssentials'
+    category: 'eco-friendly-dining-table-essentials'
   }
 ]
 
@@ -162,52 +162,52 @@ const fashionCategories = [
   {
     id: 'img-2',
     image: '//brownliving.in/cdn/shop/files/Womens_Dresses_745b5412-4cb6-4d44-91a8-9edbc3ebbc64_450x.png?v=1695303216',
-    category: 'pFashion'
+    category: 'sustainable-womens-dresses'
   },
   {
     id: 'img-4',
     image: '//brownliving.in/cdn/shop/files/Gender_Neutral_fashion_450x.png?v=1695303549',
-    category: 'pFashion'
+    category: 'unisex-sustainable-fashion'
   },
   {
     id: 'img-6',
     image: '//brownliving.in/cdn/shop/files/Womens_Co-ords_450x.png?v=1695303243',
-    category: 'pFashion'
+    category: 'sustainable-womens-overalls-co-ord'
   },
   {
     id: 'img-8',
     image: '//brownliving.in/cdn/shop/files/Plus_Size_Fashion_450x.png?v=1695303351',
-    category: 'pFashion'
+    category: 'plus-size-sustainable-clothing'
   },
   {
     id: 'img-10',
     image: '//brownliving.in/cdn/shop/files/Women_s_Jewellery_450x.png?v=1695390069',
-    category: 'pFashion'
+    category: 'eco-friendly-womens-jewellery'
   },
   {
     id: 'img-12',
     image: '//brownliving.in/cdn/shop/files/Womens_Ethnic_Traditional_Wear_450x.png?v=1695303322',
-    category: 'pFashion'
+    category: 'womens-ethnic-traditional-wear'
   },
   {
     id: 'img-14',
     image: '//brownliving.in/cdn/shop/files/Mens_Shirts_450x.png?v=1695303381',
-    category: 'pFashion'
+    category: 'sustainable-mens-shirt'
   },
   {
     id: 'img-16',
     image: '//brownliving.in/cdn/shop/files/Men_s_Accessories_450x.png?v=1695303405',
-    category: 'pFashion'
+    category: 'sustainable-mens-accessories'
   },
   {
     id: 'img-18',
     image: '//brownliving.in/cdn/shop/files/Men_s_Sweatshirts_450x.png?v=1695303496',
-    category: 'pFashion'
+    category: 'sustainable-mens-sweatshirts'
   },
   {
     id: 'img-20',
     image: '//brownliving.in/cdn/shop/files/Men_s_Ethnic_Wear_450x.png?v=1695303512',
-    category: 'pFashion'
+    category: 'sustainable-mens-ethnic-wear'
   }
 ]
 
@@ -215,37 +215,37 @@ const kidsFashionCategories = [
   {
     id: 'img-2',
     image: '//brownliving.in/cdn/shop/files/Sets_Overalls_450x.png?v=1695393704',
-    category: 'kids'
+    category: 'sustainable-kids-overalls'
   },
   {
     id: 'img-4',
     image: '//brownliving.in/cdn/shop/files/Onesies_450x.png?v=1695393759',
-    category: 'kids'
+    category: 'kids-onesies'
   },
   {
     id: 'img-6',
     image: '//brownliving.in/cdn/shop/files/Kids_Top_Wear_450x.png?v=1695393822',
-    category: 'kids'
+    category: 'organic-kids-top-wear'
   },
   {
     id: 'img-8',
     image: '//brownliving.in/cdn/shop/files/Kids_Bottom_Wear_450x.png?v=1695393966',
-    category: 'kids'
+    category: 'eco-friendly-kids-shorts-kids-bottom-wear'
   },
   {
     id: 'img-10',
     image: '//brownliving.in/cdn/shop/files/Diapering_Needs_450x.png?v=1695394010',
-    category: 'kids'
+    category: 'sustainable-kids-diapering-needs'
   },
   {
     id: 'img-12',
     image: '//brownliving.in/cdn/shop/files/Bedding_Nursery_450x.png?v=1695394044',
-    category: 'kids'
+    category: 'organic-kids-bedding-nursery-products'
   },
   {
     id: 'img-14',
     image: '//brownliving.in/cdn/shop/files/Kids_Furniture_450x.png?v=1695394100',
-    category: 'kids'
+    category: 'x-y-kids-furniture'
   }
 ]
 
@@ -253,37 +253,37 @@ const giftCategories = [
   {
     id: 'img-2',
     image: '//brownliving.in/cdn/shop/files/For_Employee_450x.png?v=1695392452',
-    category: 'gifts'
+    category: 'corporate-gifts'
   },
   {
     id: 'img-4',
     image: '//brownliving.in/cdn/shop/files/Wedding_Favours_450x.png?v=1695392494',
-    category: 'gifts'
+    category: 'gifts-for-weddings'
   },
   {
     id: 'img-6',
     image: '//brownliving.in/cdn/shop/files/Birthday_Gifts_450x.png?v=1695392550',
-    category: 'gifts'
+    category: 'sustainable-birthday-gifts'
   },
   {
     id: 'img-8',
     image: '//brownliving.in/cdn/shop/files/For_Her_450x.png?v=1695392388',
-    category: 'gifts'
+    category: 'gifts-for-her'
   },
   {
     id: 'img-10',
     image: '//brownliving.in/cdn/shop/files/For_Him_450x.png?v=1695392416',
-    category: 'gifts'
+    category: 'gifts-for-him'
   },
   {
     id: 'img-12',
     image: '//brownliving.in/cdn/shop/files/For_Pets_450x.png?v=1695392747',
-    category: 'gifts'
+    category: 'sustainable-pet-care'
   },
   {
     id: 'img-14',
     image: '//brownliving.in/cdn/shop/files/For_Kids_450x.png?v=1695392814',
-    category: 'gifts'
+    category: 'gifts-for-kids'
   }
 ]
 
@@ -291,37 +291,37 @@ const foodDrinksCategories = [
   {
     id: 'img-2',
     image: '//brownliving.in/cdn/shop/files/Coffee_450x.png?v=1695390410',
-    category: 'foodDrinks'
+    category: 'organic-coffeecollection'
   },
   {
     id: 'img-4',
     image: '//brownliving.in/cdn/shop/files/Tea_450x.png?v=1695390948',
-    category: 'foodDrinks'
+    category: 'organic-teacollection'
   },
   {
     id: 'img-6',
     image: '//brownliving.in/cdn/shop/files/Juices_Health_Drinks_450x.png?v=1695390970',
-    category: 'foodDrinks'
+    category: 'organic-juices-health-drinks'
   },
   {
     id: 'img-8',
     image: '//brownliving.in/cdn/shop/files/Ghee_450x.png?v=1695391012',
-    category: 'foodDrinks'
+    category: 'organic-grass-fed-ghee'
   },
   {
     id: 'img-10',
     image: '//brownliving.in/cdn/shop/files/Healthy_Food_450x.png?v=1695391055',
-    category: 'foodDrinks'
+    category: 'organic-healthy-foods'
   },
   {
     id: 'img-12',
     image: '//brownliving.in/cdn/shop/files/Dips_Spreads_450x.png?v=1695304485',
-    category: 'foodDrinks'
+    category: 'organic-ready-to-eat-foods'
   },
   {
     id: 'img-14',
     image: '//brownliving.in/cdn/shop/files/Beverage_Accessories_450x.png?v=1695391293',
-    category: 'foodDrinks'
+    category: 'eco-friendly-beverage-accessories'
   }
 ]
 
@@ -329,37 +329,37 @@ const travelCategories = [
   {
     id: 'img-2',
     image: '//brownliving.in/cdn/shop/files/Backpacks_450x.png?v=1695391863',
-    category: 'travel'
+    category: 'eco-friendly-backpacks'
   },
   {
     id: 'img-4',
     image: '//brownliving.in/cdn/shop/files/Everyday_Totes_81d7be9f-0f45-4aa4-9804-8d2c44f2325a_450x.png?v=1695392028',
-    category: 'travel'
+    category: 'reusable-tote-bag'
   },
   {
     id: 'img-6',
     image: '//brownliving.in/cdn/shop/files/Laptop_Sleeve_450x.png?v=1695392070',
-    category: 'travel'
+    category: 'eco-friendly-laptop-sleeve'
   },
   {
     id: 'img-8',
     image: '//brownliving.in/cdn/shop/files/Travel_Accessories_450x.png?v=1695392118',
-    category: 'travel'
+    category: 'eco-friendly-travel-accessories'
   },
   {
     id: 'img-10',
     image: '//brownliving.in/cdn/shop/files/Non-Leather_Wallets_450x.png?v=1695392173',
-    category: 'travel'
+    category: 'non-leather-wallets'
   },
   {
     id: 'img-12',
     image: '//brownliving.in/cdn/shop/files/Stationery_450x.png?v=1695392244',
-    category: 'travel'
+    category: 'eco-friendly-stationery'
   },
   {
     id: 'img-14',
     image: '//brownliving.in/cdn/shop/files/Duffels_450x.png?v=1695392210',
-    category: 'travel'
+    category: 'sustainable-travel-duffels'
   }
 ]
 

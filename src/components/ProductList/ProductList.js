@@ -111,7 +111,7 @@ const organicCareCategoroes = [
   {
     id: 'img-5',
     image: '//brownliving.in/cdn/shop/files/Face_Massagers_450x.png?v=1695390328',
-    category: 'face-massagers class'
+    category: 'face-massagers'
   },
   {
     id: 'img-6',

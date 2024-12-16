@@ -16,6 +16,7 @@ const addToCart = async (product)=>{
     product.quantity = 1;
     const response = await axios.post(`${url}/addToCart`, product);
     console.log(response.data);
+    alert(response.data.message);
   } catch (error) {
     console.error('Error posting product:', error);
     // Handle error accordingly
@@ -67,9 +68,11 @@ const TodaysTrending = ( {trendinngProducts} ) => {
       <Slider {...settings}>
         {/* {console.log(products.length)} */}
         {trendinngProducts.map((product) => (
-          <div key={product.id} className="product-card" onClick={()=>getToDetailPage(product)}>
+          <div key={product.id} className="product-card">
+            <div onClick={()=>getToDetailPage(product)}>
             <img src={product.image} alt={product.title} className="product-image" />
             <h5 className="product-name">{product.title}</h5>
+            </div>
            
             <p className="product-price">
            {product.priceCurrent && <span> ₹ {product.priceCurrent}</span>  } {product.priceOld && <span className="product-old-price">₹{product.priceOld}</span>}

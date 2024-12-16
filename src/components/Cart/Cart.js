@@ -38,22 +38,39 @@ useEffect(() => {
 
   
 
-  const handleQuantityChange = (id, change) => {
-    setCart((prevCart) =>
-      prevCart.map((item) =>
-        item.id === id
-          ? { ...item, quantity: Math.max(1, item.quantity + change) }
-          : item
-      )
-    );
-  };
+  const handleQuantityChange = async (item, change) => {
+    console.log(item)
 
-  const handleRemoveItem = (id) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+    try {
+      const response = await axios.put(`https://sai-goutham-brown-living-backend.onrender.com/api/products/cart/${change}`, {
+        id : item._id, user: item.user // Replace with dynamic username
+      });
+      console.log(response, 'response')
+      setCart(response.data.cart); // Update cart state with the response
+    } catch (error) {
+      console.error("Error removing from cart:", error);
+    }
+    // window.location.reload()
+  };
+  
+
+  const handleRemoveItem = async (item) => {
+    console.log(item._id)
+
+
+    try {
+      const response = await axios.delete("https://sai-goutham-brown-living-backend.onrender.com/api/products/cart/remove", {
+        data: { user: item.user, title: item.title, id : item._id }, // Replace with dynamic username
+      });
+      setCart(response.data); // Update cart state with the response
+    } catch (error) {
+      console.error("Error removing from cart:", error);
+    }
+    // setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
   const calculateTotal = () =>
-    cart?.reduce((total, item) => total + item.priceCurrent * item.quantity, 0);
+    Array.isArray(cart) ? cart?.reduce((total, item) => total + item.priceCurrent * item.quantity, 0) : 0;
 
   return (
     <div className="cart-container">
@@ -72,8 +89,8 @@ useEffect(() => {
             </div>
           </div>
           <hr/>
-          {cart?.map((item) => (
-            <div key={item.id} className="cart-item">
+          {Array.isArray(cart) && cart?.map((item) => (
+            <div key={item?.id} className="cart-item">
               {/*  */}
           <div className="container-fluid">
             <div className="row">
@@ -88,11 +105,11 @@ useEffect(() => {
               <div className="cart-item-details">
                 
                 <div className="cart-item-quantity">
-                  <button onClick={() => handleQuantityChange(item.id, -1)}>-</button>
+                  <button disabled={item.quantity === 1} onClick={() => handleQuantityChange(item, 'decQuantity')}>-</button>
                   <span>{item.quantity}</span>
-                  <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>
+                  <button onClick={() => handleQuantityChange(item, 'incQuantity')}>+</button>
                 </div>
-                <button className="remove-btn cart-text" onClick={() => handleRemoveItem(item.id)}>Remove</button>
+                <button className="remove-btn cart-text" onClick={() => handleRemoveItem(item)}>Remove</button>
               </div>
               </div>
               <div className="col-2">

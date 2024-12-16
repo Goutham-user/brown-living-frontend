@@ -50,6 +50,7 @@ const ProductDetails = () => {
       product.quantity = 1;
       const response = await axios.post(`${url}/addToCart`, product);
       console.log(response.data);
+      alert(response.data.message);
     } catch (error) {
       console.error('Error posting product:', error);
       // Handle error accordingly

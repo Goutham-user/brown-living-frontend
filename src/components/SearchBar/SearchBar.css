@@ -11,13 +11,14 @@
     /* border-radius: 4px 0 0 4px; */
     outline: none;
     height: 43px;
-    width: 146px;
+    width: auto;
     color: #19486A;
   }
   
   .search-input {
     padding: 8px;
-    width: 546px;
+    /* width: 546px; */
+    width: 422px;
     height: 43px;
     border: none;
     outline: none;

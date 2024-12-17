@@ -782,11 +782,20 @@ const SearchBar = () => {
     e.preventDefault();
     // Implement search functionality
     console.log('Searching for:', searchTerm);
+    navigate(`/products/${searchTerm}`);
   };
+
+  // const toTitleCase = (str) => {
+  //   if (!str) return '';
+  //   return str
+  //     .toLowerCase()
+  //     .split(/[\s\-]+/) // Split by spaces or hyphens
+  //     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  //     .join(' ');
+  // };
 
   const selecOption = (category) =>{
     setSearchTerm(category)
-    navigate(`/products/${category}`);
   }
 
  
